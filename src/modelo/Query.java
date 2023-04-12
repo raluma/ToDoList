@@ -25,7 +25,7 @@ public class Query {
     
     private String getDateLikeString(String date) {
         String month = date.substring(4, 10);
-        String year = date.substring(23, 28);
+        String year = date.substring(24, 29);
         
         return month + year;
     }

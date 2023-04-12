@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
-package todolistapp;
+package todolist;
 
 import controlador.CtrlToDoList;
 
@@ -10,7 +10,7 @@ import controlador.CtrlToDoList;
  *
  * @author ralu
  */
-public class ToDoListApp {
+public class ToDoList {
 
     /**
      * @param args the command line arguments
