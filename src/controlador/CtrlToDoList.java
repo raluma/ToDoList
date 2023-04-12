@@ -29,7 +29,7 @@ public class CtrlToDoList implements ActionListener {
     }
     
     public void init() {
-        this.form.setTitle("To do list");
+        this.form.setTitle("Task List");
         this.form.setLocationRelativeTo(null);
         this.form.setVisible(true);
         
@@ -403,6 +403,8 @@ public class CtrlToDoList implements ActionListener {
                         "Error al guardar. La tarea requiere de una descripción o una fecha para ser actualizada.");
                 } else if ("null".equals(date)) {
                     if (this.query.updateTaskByDescription(id, description)) {
+                         JOptionPane.showMessageDialog(null, 
+                        "La Tarea se ha actualizado con éxito.");
                         this.cleanLayouts();
                         this.cleanInputText();
                         this.cleanInputIdUpdate();
@@ -411,6 +413,8 @@ public class CtrlToDoList implements ActionListener {
                         JOptionPane.showMessageDialog(null, "Error al Actualizar.");
                     } 
                 } else if ("".equals(description)) {
+                     JOptionPane.showMessageDialog(null, 
+                        "La Tarea se ha actualizado con éxito.");
                     if (this.query.updateTaskByDate(id, date)) {
                         this.cleanLayouts();
                         this.cleanInputText();
@@ -421,6 +425,8 @@ public class CtrlToDoList implements ActionListener {
                     } 
                 } else {
                     if (this.query.updateTask(id, description, date)) {
+                         JOptionPane.showMessageDialog(null, 
+                        "La Tarea se ha actualizado con éxito.");
                         this.cleanLayouts();
                         this.cleanInputText();
                         this.cleanInputIdUpdate();

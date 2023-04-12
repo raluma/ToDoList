@@ -25,9 +25,9 @@ public class Conn {
     }
     
     public Connection getConnPostgresql() {
-        this.jbdcURL = "jdbc:postgresql://localhost:5432/toDoList";
-        this.user = "postgres";
-        this.password = "daw1234";
+        this.jbdcURL = "jdbc:postgresql://localhost:5432/?";
+        this.user = "?";
+        this.password = "?";
         
         try {
             this.connection = DriverManager.getConnection(
