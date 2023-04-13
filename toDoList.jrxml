@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.1.final using JasperReports Library version 6.20.1-7584acb244139816654f64e2fd57a00d3e31921e  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="toDoList" pageWidth="792" pageHeight="612" orientation="Landscape" columnWidth="752" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="6e3cd2cb-90ac-4325-a1e7-16de2956f233">
+	<property name="com.jaspersoft.studio.data.sql.SQLQueryDesigner.sash.w1" value="0"/>
+	<property name="com.jaspersoft.studio.data.sql.SQLQueryDesigner.sash.w2" value="1000"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="toDoList"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<queryString>
+		<![CDATA[SELECT * FROM tasks]]>
+	</queryString>
+	<field name="description" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="description"/>
+		<property name="com.jaspersoft.studio.field.label" value="description"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tasks"/>
+	</field>
+	<field name="date" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="date"/>
+		<property name="com.jaspersoft.studio.field.label" value="date"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tasks"/>
+	</field>
+	<field name="done" class="java.lang.Boolean">
+		<property name="com.jaspersoft.studio.field.name" value="done"/>
+		<property name="com.jaspersoft.studio.field.label" value="done"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tasks"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="101" splitType="Stretch">
+			<rectangle>
+				<reportElement x="-11" y="0" width="731" height="101" forecolor="#FF9999" backcolor="#FF9999" uuid="2aca274d-0602-4879-a860-3cc09f220621"/>
+			</rectangle>
+			<textField>
+				<reportElement key="" x="40" y="30" width="240" height="40" backcolor="#FFFFFF" uuid="4f748914-4c96-4a9c-a608-a347ab422126">
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+					<property name="com.jaspersoft.studio.element.name" value="Descripción"/>
+				</reportElement>
+				<box topPadding="1" leftPadding="1" bottomPadding="1" rightPadding="1">
+					<pen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font fontName="Times New Roman" size="26" isBold="true"/>
+					<paragraph lineSpacingSize="6.0" leftIndent="2"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Descripción"]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement x="560" y="32" width="40" height="37" uuid="d0f9ae42-706d-4c2a-bfa0-08cb86fe24b1">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box topPadding="1" leftPadding="1" bottomPadding="1" rightPadding="1">
+					<pen lineWidth="1.0"/>
+				</box>
+				<imageExpression><![CDATA["src/icons/updateIcon.png"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="640" y="31" width="40" height="38" uuid="0adc1cfb-1519-4525-9533-c82c73016fa8"/>
+				<box topPadding="1" leftPadding="1" bottomPadding="1" rightPadding="1">
+					<pen lineWidth="1.0"/>
+				</box>
+				<imageExpression><![CDATA["src/icons/addIcon.png"]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement x="330" y="31" width="190" height="39" uuid="fe39cf6f-093c-427e-8c5c-4fb374f98439">
+					<property name="com.jaspersoft.studio.element.name" value="Fecha"/>
+				</reportElement>
+				<box topPadding="1" leftPadding="1" bottomPadding="1" rightPadding="1">
+					<pen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font fontName="Times New Roman&#xA;" size="26" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Fecha"]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="84" splitType="Stretch">
+			<rectangle>
+				<reportElement x="-10" y="0" width="730" height="84" backcolor="#F2F2F2" uuid="642f5ff8-3bec-4cd4-a22a-16415fb8d16b"/>
+			</rectangle>
+			<textField>
+				<reportElement x="115" y="39" width="120" height="38" uuid="db75c2c8-c13b-4349-b7aa-b4a9274655af"/>
+				<textElement>
+					<font size="16"/>
+					<paragraph lineSpacing="Proportional"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{description}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="360" y="40" width="131" height="38" uuid="976fda74-f13b-4198-b941-3e10ec16ac29"/>
+				<textElement markup="none">
+					<font size="16"/>
+					<paragraph lineSpacingSize="10.0"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{date}]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement x="560" y="23" width="40" height="38" uuid="b2f16a06-947d-439d-b455-9ed559b608ec"/>
+				<box topPadding="1" leftPadding="1" bottomPadding="1" rightPadding="1">
+					<pen lineWidth="1.0"/>
+				</box>
+				<imageExpression><![CDATA["src/icons/removeIcon.png"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="640" y="24" width="40" height="37" uuid="520b2762-9082-4f84-8dee-6d0bab3929b6"/>
+				<box topPadding="1" leftPadding="1" bottomPadding="1" rightPadding="1">
+					<pen lineWidth="1.0"/>
+				</box>
+				<imageExpression><![CDATA["src/icons/uploadIcon.png"]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement x="40" y="40" width="50" height="37" uuid="2cc72483-3de5-4157-957e-d28895d0b414"/>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{done}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="170" splitType="Stretch">
+			<rectangle>
+				<reportElement x="-10" y="0" width="730" height="80" backcolor="#F2F2F2" uuid="fc3d25ae-a4b6-4716-9942-4c758e95eeda"/>
+			</rectangle>
+			<textField>
+				<reportElement x="40" y="30" width="50" height="38" uuid="9c26aa75-7f9d-4871-8f12-7b2c06be4a16"/>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{done}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="115" y="30" width="120" height="38" uuid="589d49db-ea4e-4498-8d03-f90995ec758c"/>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{description}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="360" y="30" width="131" height="38" uuid="ef5033d7-66a7-45b0-876a-90725b0484ed"/>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{date}]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement x="560" y="23" width="40" height="38" uuid="8be19b49-665f-438c-be77-a95fa4c6a6a9"/>
+				<box topPadding="1" leftPadding="1" bottomPadding="1" rightPadding="1">
+					<pen lineWidth="1.0"/>
+				</box>
+				<imageExpression><![CDATA["/Users/ralu/NetBeansProjects/ToDoList/src/icons/removeIcon.png"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="640" y="24" width="40" height="37" uuid="16bbe06c-abe2-4caf-8a0a-e017f7c06a49"/>
+				<box topPadding="1" leftPadding="1" bottomPadding="1" rightPadding="1">
+					<pen lineWidth="1.0"/>
+				</box>
+				<imageExpression><![CDATA["/Users/ralu/NetBeansProjects/ToDoList/src/icons/uploadIcon.png"]]></imageExpression>
+			</image>
+			<rectangle>
+				<reportElement x="-10" y="80" width="730" height="84" backcolor="#F2F2F2" uuid="e4da9f90-2b22-4365-ac0f-c2f34685c0b9"/>
+			</rectangle>
+			<textField>
+				<reportElement x="40" y="120" width="50" height="37" uuid="6c27eac0-d687-47cc-aeaf-4e84c336e341"/>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{done}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="120" y="120" width="120" height="38" uuid="868e5a4a-84c9-48cf-99e4-085d5adb7515"/>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{description}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="360" y="120" width="131" height="37" uuid="16cc351c-eab8-40d1-99f6-0123c29a3211"/>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{date}]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement x="559" y="103" width="40" height="38" uuid="1fc8c32d-fdb1-44d1-820f-33e450b0da1b"/>
+				<box topPadding="1" leftPadding="1" bottomPadding="1" rightPadding="1">
+					<pen lineWidth="1.0"/>
+				</box>
+				<imageExpression><![CDATA["/Users/ralu/NetBeansProjects/ToDoList/src/icons/removeIcon.png"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="639" y="104" width="40" height="37" uuid="32940e91-de4d-49bf-ba5e-93cb70e2660c"/>
+				<box topPadding="1" leftPadding="1" bottomPadding="1" rightPadding="1">
+					<pen lineWidth="1.0"/>
+				</box>
+				<imageExpression><![CDATA["/Users/ralu/NetBeansProjects/ToDoList/src/icons/uploadIcon.png"]]></imageExpression>
+			</image>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="78" splitType="Stretch">
+			<textField>
+				<reportElement x="10" y="24" width="100" height="30" uuid="0a7ca7ba-4ad8-4b28-b80f-b600ce42fc84"/>
+				<textFieldExpression><![CDATA[$F{done}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="140" y="34" width="100" height="30" uuid="09edf967-ef62-495f-814f-0b36e5e38dbd"/>
+				<textFieldExpression><![CDATA[$F{description}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="270" y="44" width="100" height="30" uuid="e25983bd-e830-47c3-b55c-3693da313480"/>
+				<textFieldExpression><![CDATA[$F{date}]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement x="560" y="23" width="40" height="38" uuid="1df9f060-838c-4275-9914-596ed4b76323"/>
+				<imageExpression><![CDATA["/Users/ralu/NetBeansProjects/ToDoList/src/icons/removeIcon.png"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="640" y="24" width="40" height="37" uuid="094f7fff-38fc-4494-8962-a6d1465eee0a"/>
+				<imageExpression><![CDATA["/Users/ralu/NetBeansProjects/ToDoList/src/icons/uploadIcon.png"]]></imageExpression>
+			</image>
+			<rectangle>
+				<reportElement x="-10" y="-6" width="730" height="84" backcolor="#F2F2F2" uuid="9bcf08f1-5592-477d-aafa-ae5b8ede1cb4"/>
+			</rectangle>
+			<textField>
+				<reportElement x="40" y="30" width="50" height="38" uuid="a53d008c-8c83-4c53-b2b6-d4c76e3e7253"/>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{done}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="115" y="34" width="120" height="37" uuid="75b34084-834c-44b5-bf78-f73052f45dd7"/>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{description}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="360" y="33" width="131" height="38" uuid="e0cff0bc-8e2d-4900-a1df-e243e546c4e6"/>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{date}]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement x="560" y="23" width="40" height="38" uuid="83ebe955-0de1-4d48-a537-73c1c03605d0"/>
+				<box>
+					<pen lineWidth="1.0"/>
+				</box>
+				<imageExpression><![CDATA["/Users/ralu/NetBeansProjects/ToDoList/src/icons/removeIcon.png"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="640" y="24" width="40" height="37" uuid="eaffcb62-5d2a-433d-9148-d5a8ad9064c6"/>
+				<box topPadding="1" leftPadding="1" bottomPadding="1" rightPadding="1">
+					<pen lineWidth="1.0"/>
+				</box>
+				<imageExpression><![CDATA["/Users/ralu/NetBeansProjects/ToDoList/src/icons/uploadIcon.png"]]></imageExpression>
+			</image>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
